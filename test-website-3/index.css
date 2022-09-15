@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.head-div {
+  display: none;
+  position: absolute;
+  top: 0px;
+  height: 0px;
+  width: 100%;
+  background-color: aqua;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.body-div {
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.foot-div {
+  display: none;
+  position: absolute;
+  bottom: 0px;
+  height: 0px;
+  width: 100%;
+  background-color: lightcoral;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}

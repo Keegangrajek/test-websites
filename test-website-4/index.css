@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* == End of All Section == */
+
+/* == Start of Media Query Section == */
+
+@media only screen and (max-width: 1140px) {
+  .body-box {
+    padding: 10px;
+  }
+}
+
+@media only screen and (min-width: 916px) {
+  .body-box {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+  }
+}
+
+/* == End of Media Query Section == */
+
+/* I want to highlight something special
+
+Here is the code for making a really nice simple scrollbar
+
+the "border" on the thumb (without any width defined) acts as a
+type of padding. This ends up controlling the width of the bar
+and spacing it away from the edge evenly.
+
+https://jsfiddle.net/s10f04du/
+
+This is something I want to add
+
+=== Here is the code
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* trick to only apply in webkit */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  
+  .container {
+      background-color: rgba(0, 0, 0, 0);
+      -webkit-background-clip: text; */
+      
+      /* uncomment following line to see the trick in actions */
+      
+      /* -webkit-text-fill-color: transparent; */
+      /* transition: background-color 0.3s;
+  }
+  .container::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+  }
+  .container::-webkit-scrollbar-track {
+      display: none;
+  }
+  .container::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: inherit;
+  }
+  .container:hover {
+     background-color: rgba(0, 0, 0, 0.5);
+  }
+} 
+*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border: 6px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: #222120;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #45525D;
+}
+
+.head-div-1 {
+  display: none;
+  position: fixed;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  background-color:#222120;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.head-div-2{
+  display: block;
+  position: relative;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+}
+
+.body-div {
+  overflow-y:overlay;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: calc(100% - 80px);
+  top: 60px;
+  width: 100%;
+}
+
+.body-box {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: fit-content;
+  width: 100%;
+  padding: 20px;
+}
+
+.test {
+  height: 300px;
+  width: 100%;
+  border: #222120 solid 4px;
+  border-radius: 25px;
+  background-color: #FFE0B5;
+  transition: all 0.5s;
+}
+
+.test:hover {
+  background-color: #C18536;
+  transition: all 0.5s;
+}
+
+#bb-1 {
+  background-color: white;
+  min-height: 100%;
+}
+
+#bb-2 {
+  background-color: white;
+  min-height: 100%;
+}
+
+#bb-3 {
+  background-color: white;
+  min-height: 100%;
+}
+
+.body-box a {
+  margin: 10px;
+  display: flex;
+  height: 50px;
+  width: 200px;
+  background-color: rgba(205, 216, 193, 1);
+  border-radius: 25px;
+  border: solid 3px #222120;
+  justify-content: center;
+  align-items: center;
+  color: #222120;
+  font-size: 20px;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.body-box a:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: rgb(161, 192, 125);
+}
+
+.foot-div-1 {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  height: 0px;
+  width: 100%;
+  background-color: #222120;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.foot-div-2 {
+  display: block;
+  position: relative;
+  bottom: 0px;
+  height: 0px;
+  z-index: 0;
+}

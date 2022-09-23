@@ -39,17 +39,21 @@
 
 .body-div {
   overflow-y:overlay;
-  /* box-sizing: border-box; */
-  padding: 10px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-top: 60px;
   margin-bottom: 20px;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content:center;
   flex-direction: row;
   flex-wrap: wrap;
-  height: calc(100% - 80px);
+  /* height: calc(100% - 80px); */
+  min-height: calc(100% - 80px);
+  max-height: fit-content;
   width: 100%;
   background-color: white;
 }

@@ -1,16 +1,15 @@
 var mobileNavbarState = false;
+var footerState;
 
 document.addEventListener('DOMContentLoaded', function(){
     var l = document.getElementsByClassName("head-div-1");
-    var p = document.getElementsByClassName("foot-div-1");
-    var bodyDiv = document.getElementsByClassName("body-div");
+    // var bodyDiv = document.getElementsByClassName("body-div");
     var menuBody = document.getElementsByClassName("mobilemenu-dropdown-body");
-    var menuBtn = document.getElementsByClassName('dropdown-btns');
+    // var menuBtn = document.getElementsByClassName('dropdown-btns');
     l[0].style.setProperty('display', 'flex');
     l[0].style.setProperty('height', '60px');
-    p[0].style.setProperty('display', 'flex');
-    p[0].style.setProperty('height', '20px');
     menuBody[0].style.setProperty('height', '0%');
+    footerState = false;
     // setTimeout(function(){
     //     l[0].style.setProperty('height', '400px');
     // }, 0);
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
 function toggleMobileNavbar() {
     var menuBody = document.getElementsByClassName("mobilemenu-dropdown-body");
     var bodyDiv = document.getElementsByClassName("body-div");
-    var footDiv = document.getElementsByClassName("foot-div-1");
+    // var footDiv = document.getElementsByClassName("foot-div-1");
     var menuBtn = document.getElementsByClassName('dropdown-btns');
     try {
         if (!mobileNavbarState) {
@@ -48,7 +47,7 @@ function toggleMobileNavbar() {
                 document.getElementById('span-3').classList.remove("mobile-menu-bars-span-animation-3-not");
                 menuBody[0].style.setProperty('min-height', '100%');
                 menuBody[0].style.setProperty('max-height', 'fit-content');
-                footDiv[0].style.setProperty('height', '0px');
+                // footDiv[0].style.setProperty('height', '0px');
                 bodyDiv[0].style.setProperty('transform', 'translatey(-200px)');
                 for (let index = 0; index < menuBtn.length; index++) {
                     menuBtn[index].style.setProperty('display', 'flex');
@@ -70,7 +69,7 @@ function toggleMobileNavbar() {
                 document.getElementById('span-1').classList.remove("mobile-menu-bars-span-animation-1");
                 document.getElementById('span-2').classList.remove("mobile-menu-bars-span-animation-2");
                 document.getElementById('span-3').classList.remove("mobile-menu-bars-span-animation-3");
-                footDiv[0].style.setProperty('height', '20px');
+                // footDiv[0].style.setProperty('height', '20px');
                 menuBody[0].style.setProperty('max-height', '0%');
                 menuBody[0].style.setProperty('min-height', '0%');
                 setTimeout(function(){
@@ -91,4 +90,43 @@ function toggleMobileNavbar() {
     } catch {
         console.log("error");
     }
+}
+
+function footerAction(){
+    var background = document.getElementsByClassName("foot-div-1");
+    var rightBar = document.getElementsByClassName("right-bar");
+    var leftBar = document.getElementsByClassName("left-bar");
+    var footerBody = document.getElementsByClassName("foot-popup");
+    var body = document.getElementsByClassName("body-div");
+    var headerButton = document.getElementsByClassName("mobilemenu-dropdown-btn");
+    var headerTitle = document.getElementsByClassName("head-div-1");
+    // let height = document.querySelector('.foot-popup');
+    console.log("Hello");
+    try {
+        if(!footerState){
+            console.log("ayooo");
+            headerTitle[0].style.setProperty('justify-content', 'center');
+            background[0].style.setProperty('background-color', 'white');
+            rightBar[0].classList.add("open-right-bar");
+            leftBar[0].classList.add("open-left-bar");
+            body[0].style.setProperty('display','none');
+            footerBody[0].style.setProperty('display', 'flex');
+            headerButton[0].style.setProperty('display', 'none');
+            footerState = true;
+            console.log("helo");
+            return;
+        }
+        if(footerState){
+            headerTitle[0].style.setProperty('justify-content', 'space-between');
+            background[0].style.setProperty('background-color', '#222120');
+            rightBar[0].classList.remove("open-right-bar");
+            leftBar[0].classList.remove("open-left-bar");
+            body[0].style.setProperty('display','flex');
+            footerBody[0].style.setProperty('display', 'none');
+            headerButton[0].style.setProperty('display', 'flex');
+            footerState = false;
+            console.log("aye");
+            return;
+        }
+    } catch {console.log("Error in logic footerAction()");}
 }

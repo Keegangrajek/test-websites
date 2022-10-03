@@ -396,16 +396,15 @@ body {
   width: 100%;
   bottom: 0px;
   box-sizing: border-box;
-  border: solid white 1px;
 }
 
 .foot-cont {
-  top: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
   position: absolute;
   display: flex;
-  height: calc(100% - 40px);
+  height: calc(60% - 40px);
   width: 100%;
-  border: solid white 1px;
   box-sizing: border-box;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -416,7 +415,47 @@ body {
   height: calc(100% -5px);
   margin: 20px;
   box-sizing: border-box;
-  border: solid 1px white;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items:flex-start;
+}
+
+#foot-cont-boxes h1 {
+  margin-top: 4px;
+  color: var(--btn-color-hover);
+  font-size: medium;
+}
+
+#foot-cont-boxes a {
+  margin-top: 10px;
+  font-size: smaller;
+  color: grey;
+  transition: all 0.3s;
+}
+
+#foot-cont-boxes a:hover {
+  color: rgb(151, 151, 151);
+  transition: all 0.3s;
+  cursor: pointer;
+} 
+
+.foot-cont-1 .logo-img {
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: solid 3px;
+  border-color: var(--btn-color-hover);
+  border-radius: 5px;
+}
+
+#fc6b-1 {
+  top: 0px;
+}
+
+#fc6b-2 {
+  bottom: 0px;
 }
 
 .foot-cont-1 {
@@ -436,6 +475,8 @@ body {
 }
 .foot-cont-6 {
   flex: 4;
+  display: flex;
+  justify-content: space-between;
 }
 
 .foot-popup {

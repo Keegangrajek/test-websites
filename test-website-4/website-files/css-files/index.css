@@ -267,7 +267,7 @@ body {
   transition: all 0.3s;
 }
 
-.head-div-2{
+.head-div-2 {
   display: block;
   position: relative;
   top: 0px;
@@ -439,15 +439,22 @@ body {
   cursor: pointer;
 } 
 
+#foot-cont-boxes p {
+  position: relative;
+  font-size: x-small;
+  color: grey;
+  margin-top: 3px;
+}
+
 .foot-cont-1 .logo-img {
-  margin-left: 10px;
-  margin-right: 10px;
-  position: absolute;
+  margin-bottom: 5px;
+  position: relative;
   height: 50px;
   width: 50px;
-  border: solid 3px;
-  border-color: var(--btn-color-hover);
   border-radius: 5px;
+  background-image: url("../img-files/logo-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #fc6b-1 {
@@ -480,6 +487,7 @@ body {
 }
 
 .foot-popup {
+  bottom: 0px;
   display: none;
   margin-top: 60px;
   margin-bottom: 0px;
@@ -491,7 +499,7 @@ body {
   background-color: #222120;
   align-items: center;
   justify-content: center;
-  transition: all 1s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .foot-div-1 {
@@ -501,7 +509,7 @@ body {
   background-color: #222120;
   position: fixed;
   bottom: 0px;
-  right: 12px;
+  right: 20px;
   height: 40px;
   width: 50px;
   border-top-left-radius: 10px;

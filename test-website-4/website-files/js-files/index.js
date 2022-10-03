@@ -3,12 +3,16 @@ var footerState;
 
 document.addEventListener('DOMContentLoaded', function(){
     var l = document.getElementsByClassName("head-div-1");
-    // var bodyDiv = document.getElementsByClassName("body-div");
+    var bodyDiv = document.getElementsByClassName("body-div");
     var menuBody = document.getElementsByClassName("mobilemenu-dropdown-body");
+    var footerBody = document.getElementsByClassName("foot-popup");
     // var menuBtn = document.getElementsByClassName('dropdown-btns');
     l[0].style.setProperty('display', 'flex');
     l[0].style.setProperty('height', '60px');
-    menuBody[0].style.setProperty('height', '0%');
+    menuBody[0].style.setProperty('min-height', '0%');
+    menuBody[0].style.setProperty('max-height', '0%');
+    bodyDiv[0].style.setProperty('height', 'calc(100% - 60px)');
+    footerBody[0].style.setProperty('height', '0%');
     footerState = false;
     // setTimeout(function(){
     //     l[0].style.setProperty('height', '400px');
@@ -109,9 +113,16 @@ function footerAction(){
             background[0].style.setProperty('background-color', 'white');
             rightBar[0].classList.add("open-right-bar");
             leftBar[0].classList.add("open-left-bar");
-            body[0].style.setProperty('display','none');
             footerBody[0].style.setProperty('display', 'flex');
+            setTimeout(function(){
+                footerBody[0].style.setProperty('height', 'calc(100% - 60px)');
+            }, 0);
             headerButton[0].style.setProperty('display', 'none');
+            body[0].style.setProperty('transform', 'translatey(200px)');
+            setTimeout(function(){  
+                body[0].style.setProperty('display', 'none');
+                body[0].style.setProperty('transform', 'translatey(0px)');
+            }, 300);
             footerState = true;
             console.log("helo");
             return;
@@ -122,7 +133,10 @@ function footerAction(){
             rightBar[0].classList.remove("open-right-bar");
             leftBar[0].classList.remove("open-left-bar");
             body[0].style.setProperty('display','flex');
-            footerBody[0].style.setProperty('display', 'none');
+            footerBody[0].style.setProperty('height', '0%');
+            setTimeout(function(){
+                footerBody[0].style.setProperty('display', 'none');
+            }, 300);
             headerButton[0].style.setProperty('display', 'flex');
             footerState = false;
             console.log("aye");

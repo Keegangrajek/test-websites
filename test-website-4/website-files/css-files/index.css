@@ -293,7 +293,6 @@ body {
 .body-box {
   position: relative;
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -403,11 +402,12 @@ body {
   padding-right: 40px;
   position: absolute;
   display: flex;
-  height: calc(60% - 40px);
+  height: calc(70% - 40px);
   width: 100%;
   box-sizing: border-box;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
 #foot-cont-boxes {

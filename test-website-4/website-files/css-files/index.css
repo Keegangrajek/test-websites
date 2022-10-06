@@ -430,14 +430,26 @@ body {
   margin-top: 10px;
   font-size: smaller;
   color: grey;
-  transition: all 0.3s;
+  transition: all 0.2s;
+  text-decoration: none;
 }
 
 #foot-cont-boxes a:hover {
-  color: rgb(151, 151, 151);
-  transition: all 0.3s;
+  color: rgb(185, 184, 184);
+  transition: all 0.2s;
   cursor: pointer;
-} 
+}
+
+.copyright-text span {
+  font-size: large;
+}
+
+.copyright-text {
+  margin-top: 10px;
+  font-size: smaller;
+  color: grey;
+  transition: all 0.3s;
+}
 
 #foot-cont-boxes p {
   position: relative;

@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  margin-top: 100px;
+  width: 12px;
+  position: fixed;
+  z-index: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: darkolivegreen;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 0, 0.743);
+}
+
+.head-div {
+  display: none;
+  position: fixed;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  background-color:darkolivegreen;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.body-div {
+  overflow-y:overlay;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content:center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* height: calc(100% - 80px); */
+  min-height: calc(100% - 80px);
+  max-height: fit-content;
+  width: 100%;
+  background-color: white;
+}
+
+.body-div a {
+  margin: 10px;
+  display: flex;
+  height: 50px;
+  width: 200px;
+  background-color: darkgray;
+  border-radius: 25px;
+  border: solid 2px grey;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.body-div a:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color:rgb(187, 187, 187);
+  border-color: rgb(109, 109, 109);
+  color: rgb(255, 255, 255);
+}
+
+.foot-div {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  height: 0px;
+  width: 100%;
+  background-color:cadetblue;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
